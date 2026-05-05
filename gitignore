@@ -1,0 +1,99 @@
+# ============================================================
+# Low-Light Image Enhancement — .gitignore
+# ============================================================
+
+# ── Dataset & Raw Data ──────────────────────────────────────
+data/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.tif
+# Exception: keep figures committed in reports/
+!reports/*.png
+!reports/*.jpg
+
+# ── Model Checkpoints & Weights ─────────────────────────────
+experiments/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+# Exception: keep tiny test fixtures if any
+!tests/fixtures/*.pt
+
+# ── Processed Tensors ───────────────────────────────────────
+*.pkl
+*.pickle
+*.npy
+*.npz
+data/processed/
+
+# ── Python Cache ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# ── Jupyter Notebooks ───────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+# Keep .ipynb files but ignore their checkpoint folders
+
+# ── Virtual Environments ────────────────────────────────────
+venv/
+env/
+.env/
+.venv/
+ENV/
+lowlight/
+lowlight-env/
+
+# ── IDE & Editor Files ──────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Build & Distribution ────────────────────────────────────
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# ── Testing & Coverage ──────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+
+# ── Logs & Temporary Files ──────────────────────────────────
+*.log
+*.tmp
+*.temp
+runs/
+experiments/tensorboard_logs/
+
+# ── OS Files ────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ── Secrets & Credentials ───────────────────────────────────
+.env
+*.env
+secrets.yaml
+kaggle.json
